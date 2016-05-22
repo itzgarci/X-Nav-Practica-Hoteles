@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+    Simple view of accomodations in Madrid
+-->
+<html>
+   <head>
+     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+     <title>Accomodations in Madrid</title>
+
+     <link href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" rel="stylesheet">
+     <link href="alojamientos.css" rel="stylesheet">
+     <link rel="stylesheet" href="jquery-ui.min.css">
+     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+     <script type="text/javascript" src="alojamientos.js"></script>
+     <script src="jquery-ui.min.js"></script>
+      <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+      <script src="//cdn.jsdelivr.net/interact.js/1.2.6/interact.min.js"></script>
+      <script src="github.js"></script>
+   </head>
+   <body>
+   <div id= "cabecera"><img src="madrid-banner.jpg" width = "1300" height="280"></img>
+		</div>
+		<section class="wrapper">
+    <h1>ACCOMODATIONS IN MADRID</h1>
+    <nav>  
+            <ul class="menu">
+                <li id="tabs1" onclick="showStuff(this)">Inicio</li>
+                <li id="tabs2" onclick="showStuff(this)">Colecciones</li>
+                <li id="tabs3" onclick="showStuff(this)">Usuarios</li>
+            </ul>
+	</nav>
+	 <div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-2">
+      <form id="gh-form">
+        <input type="text" id="gh-token" placeholder="Github Token">
+        <input type="text" id="gh-username" placeholder="Github Username">
+        <input type="text" id="gh-repo" placeholder="Github Repository">
+	<input onclick="ghsave();" type=button value="Almacenar">
+	<input onclick="ghloadtrampa();" type=button value="Cargar">
+      </form>
+    </div>
+    <div class="col-md-3 col-md-offset-5">
+      <div id="gh-buttons" hidden>
+        <button type="button" id="save-button">Save Data</button>
+        <button type="button" id="load-button">Load Data</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="tabs-1" class="tabContent">
+	<div id="container">
+		<div id="list" style="width:320px; height:500px; overflow:auto;">
+			<table id="table1" cellspacing="0" cellpadding="1" border="1" width="300" >
+				<tr>
+					<th>Hoteles</th>
+				</tr>   
+			</table>  
+		</div>
+		
+		<div id="map"></div>
+	</div>
+	<p id="get1">Click here to get accomodations!</p>
+	
+</div>
+	<div id="tabs-2" class="tabContent">
+	<div id="coleccion2">
+	
+						<form id="gh-form2">
+        <input type="text" id="nuevacol" placeholder="Nueva Coleccion">
+	<input onclick="crearcoleccion();" type=button value="Guardar">
+	</form>
+				</div>
+		<p id="get2">Click here to get accomodations!</p>
+		<div id="container">
+			<div id="list" style="width:320px; height:500px; overflow:auto;">
+				<table id="table2" cellspacing="0" cellpadding="1" border="1" width="300" style="float:left">
+					<tr>
+						<th>Hoteles</th>
+					</tr>   
+				</table>  
+			</div>
+			
+			<table id="colecciones" class="scroll"  cellspacing="0" cellpadding="1" border="1" width="300" style="float:left">
+				<tr>
+					<th>Colecciones</th>
+				</tr>
+			</table>
+	
+			<table id="coleccion" class="scroll"  cellspacing="0" cellpadding="1" border="1" width="300" style="float:left">
+				<tr>
+					<th>Coleccion</th>
+				</tr>
+			</table>
+
+		
+		</div>
+		
+		<p id="desc2"></p>
+		
+	</div>
+	<div id="tabs-3" class="tabContent">
+		<div id="container">
+				<div id="coleccion3">
+	
+						<form id="gh-form">
+        <input type="text" id="newuser" placeholder="Nuevo Usuario">
+	<input onclick="add_new_user();" type=button value="Guardar">
+	</form>
+				</div>
+				<table id="usuarios" class="scroll"  cellspacing="0" cellpadding="1" border="1" width="300" >
+					
+						<tr>
+							<th>Usuarios</th>
+						</tr>
+
+				</table>
+		</div>
+		<p id="desc3"></p>
+     </div>
+   </body>
+</html>
+

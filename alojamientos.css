@@ -1,0 +1,122 @@
+/* CSS for simple.html (Leaflet) */
+
+#map { height: 400px;}
+
+body{
+	background-color:silver;
+}
+#table1, #table2, #colecciones, #coleccion, #usuarios {
+	background-color: white;
+}
+
+.wrapper {
+  margin: auto;
+  padding: 1em;
+  width: 100%;
+}
+h1 {
+  font-size:14px;
+  color: black;
+  text-align: center;
+  
+}
+
+    /*----- Tab Links -----*/
+    /* Clearfix */
+    .tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+    }
+ 
+    .tab-links li {
+        margin:0px 5px;
+        float:left;
+        list-style:none;
+    }
+ 
+        .tab-links a {
+            padding:9px 15px;
+            display:inline-block;
+            border-radius:3px 3px 0px 0px;
+            background:#7FB5DA;
+            font-size:16px;
+            font-weight:600;
+            color:#4c4c4c;
+            transition:all linear 0.15s;
+        }
+ 
+        .tab-links a:hover {
+            background:#a7cce5;
+            text-decoration:none;
+        }
+ 
+    li.active a, li.active a:hover {
+        background:#fff;
+        color:#4c4c4c;
+    }
+ 
+    /*----- Content of Tabs -----*/
+    .tab-content {
+        padding:15px;
+        border-radius:3px;
+        box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+        background:#fff;
+    }
+ 
+        .tab {
+            display:none;
+        }
+#container {
+   /* width: 600px;*/
+}
+#list {
+    width:320px; 
+    height:500px
+    max-width: 100%;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -ms-text-overflow:ellipsis;
+    float: left;
+}
+#map {
+    width: 900px;
+    height: 500px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -ms-text-overflow:ellipsis;
+    text-align: right;
+}
+nav { width:1023px; z-index:100; background:url(../images/shadow-2.png) center bottom no-repeat; margin:0px auto; padding:0px; border-bottom:#d0dde2 1px solid; border-top:#d0dde2 1px solid; text-align:center;}
+ul.menu {margin:10px 0px 10px 0px; display:inline-block;}
+ul.menu li {float:left; line-height:29px; margin:0px 0px 0px 0px; width:193px; text-align:center; border-left:#d2dfe3 1px solid; }
+ul.menu li:first-child {border:transparent 1px solid;} 
+ul.menu li a {font-size:20px; line-height:29px; color:#fff; font-family: 'Passion One', cursive; font-weight:400; display:inline-block; text-shadow: 3px 3px 1px #acbec6; letter-spacing:1px; }
+ul.menu li a:hover , ul.menu li.current a { color:#dae4e8; text-shadow: 0px 0px 1px #c4d2d8; }
+
+.tabContent {
+    display:none;
+}
+
+/*
+
+#container {
+    width: 300px;
+    background-color: #ffcc33;
+    margin: auto;
+}
+# {
+    width: 100px;
+    float: left;
+    height: 300px;
+        background-color: blue;
+}
+#second {
+    width: 200px;
+    float: left;
+    height: 300px;
+    background-color: green;
+}
+*/	
